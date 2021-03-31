@@ -1,0 +1,340 @@
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------- */
+
+/* BASE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* #navtop {
+    text-align: center;
+    font-size:30px;
+    color: teal;
+} */
+
+a {
+    text-decoration: none;
+}
+
+/* #sticky {
+    margin: 0 5% 0 90%;
+    position: sticky;
+    top: 0;
+}  */
+
+.card-title {
+    width: 100vw;
+    text-align: center;
+    background:transparent;
+    padding: 40px;
+    clear: both;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+#section-cards {
+    width: 90vw;
+    height: 100vh;
+    grid-gap: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 5% 0 5%;
+}
+
+.card {
+    transition: all .3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    border-radius: 15px;
+}
+
+#btn {
+    font-size: 14px;
+    color: #fdfdfd;
+    letter-spacing: 1.5px;
+    font-family: sans-serif;
+    width: 90px;
+    background: rgba(155, 79, 56,0.8);
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    margin-top: 40px;
+    transition:  border-radius .3s;
+}
+
+#plus {
+    float: right;
+    padding-right: 5px;
+}
+
+#btn:hover {
+    border-radius: 20px;
+}
+
+/* HEADER */
+#logo {
+    background: url(../images/logo.svg) no-repeat center center;
+    width: 100vw;
+    height: 12vh;
+    margin: 20px 0;
+}
+
+#section-menu {
+    width: 100vw;
+    background: rgba(00,00,00,0.9);
+}
+
+#section-menu li {
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #fdfdfd;
+    list-style-type: none;
+    text-decoration: none;
+    transition: all .6s;
+}
+
+#section-menu a {
+    text-decoration: none;
+}
+
+#section-menu li:hover {
+    background-color: rgba(250,250,250,0.8);
+    color: #3d3d3d;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+}
+/* ---------------------- */
+
+/* SLIDER */
+#bg-lg {
+    background: url(../images/banner2.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    float: left;
+    margin-top: 5px;
+    transition: all .4s;
+}
+
+#bg-lg:hover{
+    box-shadow: 1px 1px 100px #000 inset;
+}
+
+#searchbar {
+    border: none;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 5px;
+    margin: 0 45%;
+    background: rgba(255,255,255,0.9);
+    transition: all .5s;
+}
+
+#searchbar:hover {
+    width: 33vw;
+    margin: 0 33%;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.9);
+}
+
+input::placeholder {
+    padding: 20px;
+    font-style: italic;
+    opacity: .5;
+}
+
+#title {
+    width: 30vw;
+    padding: 10px;
+    font-size: 40px;
+    font-family: Cookie;
+    color: #fdfdfd;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 2%;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px 5px 20px 5px;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ----------------------------- */
+
+/* LATEST RECIPES */
+#card1 {
+background:#d3d3d3;
+/*   grid-area: box1; 
+/*  area name  */
+}
+
+#card2 {
+background:#d3d3d3
+}
+
+#card3 {
+background:#d3d3d3
+/*equivalent to:
+grid-column-start grid-column-end
+*/
+}
+
+#card4 {
+background:#d3d3d3
+}
+
+#card5 {
+background: #d3d3d3;
+}
+
+#card6 {
+background: #d3d3d3;
+}
+
+/* -------------------------- */
+
+/* ABOUT */
+#about {
+    display: flex;
+    justify-content: center;
+}
+
+#about-card {
+    width: 62vw;
+    padding: 50px;
+    background: rgb(230,230,230);
+    transition: all .3s;
+}
+
+#about-card:hover {
+    border-radius: 40px;
+    background: rgb(224,230,224);
+}
+
+#bg-img {
+    background: url(../images/poza2.jpg) no-repeat center center;
+    background-size: cover;
+    width: 320px;
+    height: 320px;
+    float: left;
+    border-radius: 10px;
+}
+
+#text-content {
+    float: right;
+}
+
+#about-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: italic;
+    margin: 40px 0;
+}
+
+#about-text {
+    width: 25vw;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+#about-text p {
+    margin-bottom: 15px;
+}
+/* ---------------------- */
+
+/* FOOTER */
+#section-footer {
+    margin: 100px 0 120px 0;
+}
+
+
+#footlogo {
+    background: url(../images/logo.svg) no-repeat center center;
+    width: 90px;
+    height: 12vh;
+    margin: 20px 0;
+}
+
+main {
+    display: flex;
+  /*   grid-template-areas: 
+        "box1 box2"     "box3 box3";
+  /*  "first column" "seccond column" */
+  }
+  
+.box {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+  #box1 {
+    border-right: solid 1px rgba(33,33,33,0.3);
+  /*   grid-area: box1; 
+  /*  area name  */
+  }
+  
+  
+  #box3 {
+    border-left: solid 1px rgba(33,33,33,0.3);
+  /*equivalent to:
+    grid-column-start grid-column-end
+    */
+  }
+
+  #footnav {
+      list-style-type: none;
+      display: flex;
+      padding: 50px 0;
+  }
+
+  #footnav li {
+      padding: 20px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: sans-serif;
+  }
+
+  #footnav a {
+      text-decoration: none;
+      color: #4d4d4d;
+      transition: all 1s
+  }
+
+  
+  #footnav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: width .2s ease-in;
+  }
+  
+  #footnav a:hover::after {
+    width: 100%;
+  }
+
+  .icon {
+      width: 1.5vw;
+      margin: 0 15px;
+  }
