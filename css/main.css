@@ -68,6 +68,7 @@ html {
 
 #btn:hover {
   border-radius: 20px;
+  cursor: pointer;
 }
 
 /* HEADER */
@@ -445,7 +446,6 @@ main {
     height: 50vh;
   }
   #title {
-    max-width: 80%;
     width: 100%;
     font-size: 30px;
   }
@@ -469,17 +469,20 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   #about-card {
-    max-width: 80%;
-    width: 100%;
-    padding: 20px;
+    width: 100% !important;
+    padding: 0;
     background: #e6e6e6;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
+  #about-text {
+    padding: 0;
+  }
   #about-card:hover {
-    border-radius: 40px;
+    border-radius: 0px !important;
     background: #e0e6e0;
   }
   #bg-img {
@@ -488,8 +491,11 @@ main {
     position: absolute;
   }
   #about-text {
-    max-width: 100%;
     width: 100%;
+  }
+  #text-content {
+    width: 100%;
+    padding: 0;
   }
   #section-footer {
     margin: 0;
