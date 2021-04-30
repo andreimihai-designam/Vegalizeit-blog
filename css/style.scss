@@ -666,7 +666,7 @@ main {
 }
 
 /* mobile */
-@media only screen and (max-width: 550px) and (min-width: 350px) {
+@media only screen and (max-width: 550px) and (min-width: 300px) {
   #logo {
     display: none;
   }
@@ -754,9 +754,10 @@ main {
 
   #title {
     width: 100%;
-    height: 105px;
+    height: auto;
     font-size: 30px;
-    padding: 0 50px;
+    padding: 0 30px;
+    padding-bottom: 1px;
   }
 
   #searchbar {
