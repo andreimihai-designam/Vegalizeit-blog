@@ -488,7 +488,7 @@ main {
   }
 }
 /* tablets */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   #bg-lg {
     margin-top: 0;
     height: 50vh;
@@ -641,7 +641,7 @@ main {
   }
 }
 /* mobile */
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 550px) and (min-width: 350px) {
   #logo {
     display: none;
   }
