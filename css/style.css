@@ -6,6 +6,7 @@
   text-decoration: none;
   list-style-type: none;
   outline: none;
+  font-size: 62.5%;
 }
 
 /* ------------- */
@@ -23,7 +24,7 @@ html {
   font-weight: 200;
   letter-spacing: 2px;
   color: rgba(61, 61, 61, 0.9);
-  font-size: 25px;
+  font-size: 2.5rem;
   margin: 10px 0;
   transition: all 0.5s ease;
 }
@@ -50,7 +51,7 @@ html {
 }
 
 #btn {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #fdfdfd;
   letter-spacing: 1.5px;
   font-family: sans-serif;
@@ -102,7 +103,7 @@ ul li {
   padding: 15px 25px;
   text-transform: uppercase;
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #3d3d3d;
   list-style-type: none;
   text-decoration: none;
@@ -198,7 +199,7 @@ ul a:hover::after {
   height: 5vh;
   margin: 0 auto;
   margin-top: 20px;
-  padding: 0 20px;
+  padding: 5px 20px 0 20px;
   background: rgba(255, 255, 255, 0.9);
   transition: all 0.5s;
   display: block;
@@ -215,16 +216,19 @@ ul a:hover::after {
 }
 
 input::-moz-placeholder {
+  font-size: 1.2rem;
   font-style: italic;
   opacity: 0.5;
 }
 
 input:-ms-input-placeholder {
+  font-size: 1.2rem;
   font-style: italic;
   opacity: 0.5;
 }
 
 input::placeholder {
+  font-size: 1.2rem;
   font-style: italic;
   opacity: 0.5;
 }
@@ -243,7 +247,7 @@ input::placeholder {
   transition: all 0.3s ease;
 }
 #title h3 {
-  font-size: 30px;
+  font-size: 5rem;
   text-align: center;
   margin: 20px auto;
   padding: 20px 0 0 0;
@@ -251,10 +255,10 @@ input::placeholder {
 #title p {
   font-family: Pepitto;
   text-align: justify;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0 30px 20px 30px;
   opacity: 0.9;
-  line-height: 1.5rem;
+  line-height: 2rem;
   font-style: italic;
 }
 #title:hover {
@@ -338,7 +342,7 @@ input::placeholder {
 
 #about-title {
   font-family: "Courier New", Courier, monospace;
-  font-size: 14px;
+  font-size: 2.5rem;
   font-style: italic;
   margin: 40px 0;
 }
@@ -346,7 +350,7 @@ input::placeholder {
 #about-text {
   width: 25vw;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 2rem;
   text-align: justify;
 }
 
@@ -412,7 +416,7 @@ main {
 #footnav li {
   padding: 20px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-family: sans-serif;
   color: #3d3d3d;
   background: none;
@@ -497,7 +501,7 @@ main {
   #title {
     max-width: 80%;
     width: 100%;
-    font-size: 30px;
+    font-size: 3rem;
   }
 
   #searchbar {
@@ -591,7 +595,7 @@ main {
   }
   #footnav li {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-family: sans-serif;
     color: #3d3d3d;
   }
@@ -727,7 +731,7 @@ ul {
     padding: 15px 25px;
     text-transform: uppercase;
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 1.2rem;
     color: #fdfdfd;
     transition: all 0.6s;
     text-align: center;
@@ -751,7 +755,7 @@ ul {
   #title {
     width: 100%;
     height: auto;
-    font-size: 30px;
+    font-size: 3rem;
     padding: 0 30px;
     padding-bottom: 1px;
   }
@@ -854,7 +858,7 @@ ul {
   }
   #footnav li {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-family: sans-serif;
     color: #3d3d3d;
   }
