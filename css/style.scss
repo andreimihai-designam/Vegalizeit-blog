@@ -1,3 +1,12 @@
+//variables
+$header-footer-color: #f0e6e7;
+$secondary-color: #58ba83;
+$nav-border-color: #006434;
+$btn-color: #bf4342;
+$tertiary-color: #b46e39;
+$font-color: #3d3d3d;
+$text-color: #44312e;
+
 /* CSS RESET */
 * {
   margin: 0;
@@ -15,14 +24,23 @@ html {
 }
 
 .card-title {
-  width: 100vw;
   text-align: center;
-  background: #f0f0f0;
+  background: rgba($header-footer-color, 0.3);
   padding: 30px;
   clear: both;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  color: rgba($font-color, 0.9);
   font-size: 25px;
   margin: 10px 0;
+  transition: all 0.5s ease;
+
+  p {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 #section-cards {
@@ -39,6 +57,7 @@ html {
   &:hover {
     transform: scale(1.03);
     border-radius: 15px;
+    cursor: pointer;
   }
 }
 
@@ -48,7 +67,7 @@ html {
   letter-spacing: 1.5px;
   font-family: sans-serif;
   width: 90px;
-  background: #bf4342c2;
+  background: rgba($btn-color, 0.8);
   text-align: center;
   padding: 10px;
   margin: auto;
@@ -81,14 +100,13 @@ ul {
 }
 
 #section-header {
-  background: rgb(244, 244, 244);
+  background: rgba($header-footer-color, 0.3);
   padding: 1px;
 }
 
 ul {
   width: 100%;
   margin: 0 auto;
-  background: rgb(244, 244, 244);
   display: flex;
   justify-content: center;
   z-index: 10;
@@ -104,7 +122,7 @@ ul {
     transition: all 0.6s;
 
     &:hover {
-      color: #3d3d3d;
+      color: $font-color;
     }
 
     a {
@@ -113,7 +131,7 @@ ul {
         display: block;
         width: 0;
         height: 2px;
-        background: #3d3d3d;
+        background: rgba($nav-border-color, 0.5);
         transition: width 0.2s ease-in;
       }
     }
@@ -126,7 +144,7 @@ ul {
       display: block;
       width: 0;
       height: 2px;
-      background: #3d3d3d;
+      background: rgba($nav-border-color, 0.5);
       transition: width 0.2s ease-in;
     }
 
@@ -139,8 +157,28 @@ ul {
 /* ---------------------- */
 
 /* SLIDER */
-.slide {
-  transition: all 0.4s;
+
+@keyframes slide {
+  0% {
+    background: url(../images/banner1.jpeg) no-repeat center center;
+    background-size: cover;
+  }
+  25% {
+    background: url(../images/banner1.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  50% {
+    background: url(../images/banner3.jpeg) no-repeat center center;
+    background-size: cover;
+  }
+  75% {
+    background: url(../images/banner4.jpeg) no-repeat center center;
+    background-size: cover;
+  }
+  100% {
+    background: url(../images/banner1.jpeg) no-repeat center center;
+    background-size: cover;
+  }
 }
 
 #bg-lg {
@@ -150,27 +188,14 @@ ul {
   height: 80vh;
   float: left;
   margin: 10px 0;
-  transition: all 0.5s ease;
-
-  &:hover {
-    box-shadow: 1px 1px 100px #000 inset;
-  }
-
-  #slide1 {
-    background: url(../images/banner2.jpg) no-repeat center center;
-    background-size: cover;
-    width: 100vw;
-    height: 80vh;
-    float: left;
-    margin-top: 5px;
-  }
+  transition: all 5s ease;
+  animation: slide 20s infinite;
 
   #searchbar {
     border: none;
     max-width: 30%;
     width: 100%;
     height: 5vh;
-    border-radius: 50px;
     margin: 0 auto;
     margin-top: 20px;
     padding: 0 20px;
@@ -180,31 +205,58 @@ ul {
     outline: none;
     color: #4d4d4d;
     letter-spacing: 1px;
-  }
+    border-radius: 5px;
 
-  input {
-    &::placeholder {
-      font-style: italic;
-      opacity: 0.5;
+    &:hover {
+      border-radius: 10px;
     }
+
+    &:focus {
+      border-radius: 20px;
+    }
+  }
+}
+
+input {
+  &::placeholder {
+    font-style: italic;
+    opacity: 0.5;
   }
 }
 
 #title {
   max-width: 40%;
   width: 100%;
-  padding: 10px;
-  font-size: 40px;
-  font-family: Cookie;
-  color: #fdfdfd;
-  text-shadow: 2px 2px 4px #000;
-  text-align: center;
+  color: #434343;
   margin: auto;
   margin-top: 15vh;
   margin-bottom: 2%;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 20px 5px 20px 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
   animation: fadein 2s;
+  transition: all 0.3s ease;
+
+  h3 {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px 0 0 0;
+  }
+
+  p {
+    font-family: Pepitto;
+    text-align: justify;
+    font-size: 1rem;
+    padding: 0 30px 20px 30px;
+    opacity: 0.9;
+    line-height: 1.5rem;
+    font-style: italic;
+  }
+
+  &:hover {
+    border-radius: 20px;
+    cursor: pointer;
+  }
 }
 
 @keyframes fadein {
@@ -220,27 +272,27 @@ ul {
 
 /* LATEST RECIPES */
 #card1 {
-  background: #d3d3d3;
+  background: rgba($header-footer-color, 0.3);
 }
 
 #card2 {
-  background: #d3d3d3;
+  background: rgba($header-footer-color, 0.3);
 }
 
 #card3 {
-  background: #d3d3d3;
+  background: rgba($header-footer-color, 0.3);
 }
 
 #card4 {
-  background: #d3d3d3;
+  background: rgba($header-footer-color, 0.3);
 }
 
 #card5 {
-  background: #d3d3d3;
+  background: rgba($header-footer-color, 0.3);
 }
 
 #card6 {
-  background: #d3d3d3;
+  background: rgba($header-footer-color, 0.3);
 }
 
 /* -------------------------- */
@@ -267,6 +319,10 @@ ul {
     height: 320px;
     float: left;
     border-radius: 10px;
+
+    &:nth-child(2) {
+      display: none;
+    }
   }
 }
 
@@ -293,9 +349,23 @@ ul {
 }
 /* ---------------------- */
 
+/* RECIPES */
+#section-recipes {
+  display: flex;
+  justify-content: center;
+  #recipes-title {
+    text-align: center;
+
+    h3 {
+      margin: 20px 0;
+    }
+  }
+}
 /* FOOTER */
 #section-footer {
   margin: 100px 0 0 0;
+  background: rgba($header-footer-color, 0.3);
+  padding: 50px;
 }
 
 #footlogo {
@@ -373,6 +443,228 @@ main {
   width: 1.5vw;
   margin: 0 15px;
 }
+
+//larger screens
+@media only screen and (max-width: 1130px) {
+  #title {
+    max-width: 70%;
+  }
+
+  #bg-lg {
+    #searchbar {
+      max-width: 60%;
+    }
+  }
+
+  #section-cards {
+    width: 90%;
+    grid-gap: 2%;
+  }
+
+  #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about-card {
+    width: 100%;
+    padding: 20px 30px 0 30px;
+    background: none;
+    transition: all 0.3s;
+
+    &:hover {
+      border-radius: 40px;
+    }
+
+    #bg-img {
+      width: calc(100% / 2 - 10px);
+      height: 250px;
+
+      &:nth-child(2) {
+        display: block;
+        margin-left: 20px;
+      }
+    }
+
+    #about-title {
+      text-align: center;
+    }
+
+    #about-text {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* tablets */
+@media only screen and (max-width: 800px) {
+  #bg-lg {
+    margin-top: 0;
+    height: 50vh;
+  }
+
+  #title {
+    max-width: 80%;
+    width: 100%;
+    font-size: 30px;
+  }
+
+  #searchbar {
+    max-width: 60%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  #section-cards {
+    max-width: 90%;
+    width: 100%;
+    height: 40vh;
+    grid-gap: 2%;
+    margin: 0 auto;
+  }
+
+  #about {
+    display: flex;
+    justify-content: center;
+  }
+
+  #about-card {
+    width: 100%;
+    padding: 20px 30px 0 30px;
+    background: none;
+    transition: all 0.3s;
+
+    &:hover {
+      border-radius: 40px;
+    }
+
+    #bg-img {
+      width: 100%;
+      height: 250px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    #about-title {
+      text-align: center;
+    }
+
+    #about-text {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  #section-footer {
+    margin: 0 auto;
+    background: rgba($header-footer-color, 0.3);
+    width: 100%;
+  }
+
+  #footlogo {
+    background: url(../images/logo.svg) no-repeat center center;
+    width: 60%;
+    margin: 70px auto 0 auto;
+  }
+
+  main {
+    display: grid;
+    width: 100%;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  #box1 {
+    border: none;
+    width: 10%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #box2 {
+    height: 80px;
+    border: none;
+  }
+
+  #box3 {
+    border: none;
+  }
+
+  #footnav {
+    list-style-type: none;
+    background: none;
+    margin: 80px auto 0 auto;
+
+    li {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: sans-serif;
+      color: #3d3d3d;
+
+      &:first-child {
+        margin-left: -10px;
+      }
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #4d4d4d;
+      transition: all 1s;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        transition: width 0.2s ease-in;
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .icon {
+    width: 100%;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
+
+  #you {
+    float: left;
+  }
+
+  #inst {
+    float: left;
+    margin: 0 20px;
+  }
+
+  #fb {
+    clear: both;
+  }
+}
+
 /* mobile */
 @media only screen and (max-width: 550px) {
   #logo {
@@ -380,7 +672,7 @@ main {
   }
 
   #section-header {
-    background: white;
+    background: rgba($header-footer-color, 0.3);
     width: 100%;
     height: 45px;
   }
@@ -454,12 +746,17 @@ main {
   #bg-lg {
     margin-top: 0;
     height: 50vh;
+
+    p {
+      display: none;
+    }
   }
 
   #title {
     width: 100%;
-    height: 65px;
+    height: 105px;
     font-size: 30px;
+    padding: 0 50px;
   }
 
   #searchbar {
@@ -519,15 +816,15 @@ main {
   }
 
   #section-footer {
-    margin: 0;
-    background: #d2d2d27c;
-    margin-top: 50px;
+    margin: 0 auto;
+    background: rgba($header-footer-color, 0.3);
+    width: 100%;
   }
 
   #footlogo {
     background: url(../images/logo.svg) no-repeat center center;
     width: 60%;
-    margin: 0 auto;
+    margin: 70px auto 0 auto;
   }
 
   main {
@@ -542,24 +839,33 @@ main {
   #box1 {
     border: none;
     width: 10%;
-    height: 80px;
+    height: auto;
     margin: 0 auto;
-    margin-top: 50px;
   }
 
   #box2 {
     height: 80px;
+    border: none;
+  }
+
+  #box3 {
+    border: none;
   }
 
   #footnav {
     list-style-type: none;
     background: none;
+    margin: 80px auto 0 auto;
 
     li {
       text-transform: uppercase;
       font-size: 12px;
       font-family: sans-serif;
       color: #3d3d3d;
+
+      &:first-child {
+        margin-left: -10px;
+      }
 
       &:hover {
         background: none;
@@ -594,151 +900,6 @@ main {
       transform: scale(1.2);
       cursor: pointer;
     }
-  }
-
-  #you {
-    float: left;
-  }
-
-  #inst {
-    float: left;
-    margin: 0 20px;
-  }
-
-  #fb {
-    clear: both;
-  }
-}
-
-/* tablets */
-@media only screen and (max-width: 800px) {
-  #bg-lg {
-    margin-top: 0;
-    height: 50vh;
-  }
-
-  #title {
-    max-width: 80%;
-    width: 100%;
-    font-size: 30px;
-  }
-
-  #searchbar {
-    max-width: 60%;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-
-  #section-cards {
-    max-width: 90%;
-    width: 100%;
-    height: 40vh;
-    grid-gap: 2%;
-    margin: 0 auto;
-  }
-
-  #about {
-    display: flex;
-    justify-content: center;
-  }
-
-  #about-card {
-    width: 62vw;
-    padding: 20px 30px 0 30px;
-    background: none;
-    transition: all 0.3s;
-
-    &:hover {
-      border-radius: 40px;
-    }
-  }
-
-  #bg-img {
-    width: 100%;
-    height: 320px;
-  }
-
-  #about-text {
-    width: 100%;
-  }
-
-  #section-footer {
-    margin: 0;
-    background: #d2d2d27c;
-    margin-top: 50px;
-  }
-
-  #footlogo {
-    background: url(../images/logo.svg) no-repeat center center;
-    width: 60%;
-    margin: 0 auto;
-  }
-
-  main {
-    display: grid;
-    width: 100%;
-  }
-
-  .box {
-    width: 100%;
-  }
-
-  #box1 {
-    border: none;
-    width: 10%;
-    height: 80px;
-    margin: 0 auto;
-    margin-top: 50px;
-  }
-
-  #box2 {
-    height: 80px;
-  }
-
-  #footnav {
-    list-style-type: none;
-    background: none;
-
-    li {
-      text-transform: uppercase;
-      font-size: 12px;
-      font-family: sans-serif;
-      color: #3d3d3d;
-
-      &:hover {
-        background: none;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: #4d4d4d;
-      transition: all 1s;
-
-      &::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 1px;
-        transition: width 0.2s ease-in;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
-  }
-
-  #footnav #footnav li #footnav #footnav a #footnav a .icon {
-    width: 100%;
-    margin: 0 auto;
-    transition: all 0.3s ease;
-  }
-
-  .icon:hover {
-    transform: scale(1.2);
-    cursor: pointer;
   }
 
   #you {
