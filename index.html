@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -53,14 +54,18 @@
         <div class="card-title" id="recipes">
         Latest Recipes
         </div>
-        <section id="section-cards">
-            <div class="card" id="card1"></div>
-            <div class="card" id="card2"></div>
-            <div class="card" id="card3"></div>
-            <div class="card" id="card4"></div>
-            <div class="card" id="card5"></div>
-            <div class="card" id="card6"></div>
-        </section>
+        <!-- <section id="recipes-cards" class="section-cards">
+
+        </section> -->
+		<div class="owl-carousel owl-carousel-container" id="galerie">
+            <div class="owl-carousel-img"><img src="images/carousel/first-img.jpeg"></div>
+            <div class="owl-carousel-img"><img src="images/carousel/second-img.jpeg"></div>
+            <div class="owl-carousel-img"><img src="images/carousel/third-img.jpeg"></div>
+            <div class="owl-carousel-img"><img src="images/carousel/forth-img.jpeg"></div>
+            <div class="owl-carousel-img"><img src="images/carousel/fifth-img.jpeg"></div>
+            <div class="owl-carousel-img"><img src="images/carousel/sixed-img.jpeg"></div>
+        </div>
+
         <div id="card-btn">
             <div id="btn">More
                 <div id="plus">&plus;</div>
@@ -92,14 +97,44 @@
     <div class="card-title" id="articles">
         Latest Articles
     </div>
-    <section id="section-cards">
-        <div class="card" id="card1"></div>
-        <div class="card" id="card2"></div>
-        <div class="card" id="card3"></div>
-        <div class="card" id="card4"></div>
-        <div class="card" id="card5"></div>
-        <div class="card" id="card6"></div>
-    </section>
+    <div class="owl-carousel owl-carousel-container" id="galerie">
+        <div class="owl-carousel-img">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
+            </p>
+            <p><a href="#">Read more...</a></p>
+        </div>
+        <div class="owl-carousel-img">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
+            </p>         
+            <p><a href="#">Read more...</a></p>
+        </div>
+        <div class="owl-carousel-img">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
+            </p>
+            <p><a href="#">Read more...</a></p>
+        </div>
+        <div class="owl-carousel-img">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
+            </p>
+            <p><a href="#">Read more...</a></p>
+        </div>
+        <div class="owl-carousel-img">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
+            </p>
+            <p><a href="#">Read more...</a></p>
+        </div>
+        <div class="owl-carousel-img">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
+            </p>
+            <p><a href="#">Read more...</a></p>
+        </div>
+    </div>
     <div id="card-btn">
         <div id="btn">More
             <div id="plus">&plus;</div>
@@ -131,14 +166,14 @@
     <div class="card-title" id="videos">
         Latest Videos
     </div>
-    <section id="section-cards">
-        <div class="card" id="card1"></div>
-        <div class="card" id="card2"></div>
-        <div class="card" id="card3"></div>
-        <div class="card" id="card4"></div>
-        <div class="card" id="card5"></div>
-        <div class="card" id="card6"></div>
-    </section>
+    <div class="owl-carousel owl-carousel-container" id="galerie">
+        <div class="owl-carousel-img"><img src="images/video-carousel/first-vd.jpeg"></div>
+        <div class="owl-carousel-img"><img src="images/video-carousel/second-vd.jpeg"></div>
+        <div class="owl-carousel-img"><img src="images/video-carousel/third-vd.jpeg"></div>
+        <div class="owl-carousel-img"><img src="images/video-carousel/forth-vd.jpeg"></div>
+        <div class="owl-carousel-img"><img src="images/video-carousel/fifth-vd.jpeg"></div>
+        <div class="owl-carousel-img"><img src="images/video-carousel/sixed-vd.jpeg"></div>
+    </div>
     <div id="card-btn">
         <div id="btn">More
             <div id="plus">&plus;</div>
@@ -167,5 +202,33 @@
 
 
 
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+				loop:true,
+                animateOut: 'slideOutDown',
+                animateIn: 'flipInX',
+				margin:30,
+				navText: ['&#10094;','&#10095;'],
+				nav:true,
+				dotsEach: false, 
+				autoplay: true,
+				autoplayTimeout: 2500,
+				autoplayHoverPause: true,
+				responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:3
+					},
+					1000:{
+						items:4
+					}
+				}
+			})
+    </script>
+    
 </body>
 </html>
