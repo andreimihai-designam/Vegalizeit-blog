@@ -51,8 +51,9 @@
                 <h2 id="navtop"> &uparrow; </h2>
             </div>
         </a> -->
+        <!-- ------ -->
         <div class="card-title" id="recipes">
-        Latest Recipes
+            Latest Recipes
         </div>
         <!-- <section id="recipes-cards" class="section-cards">
 
@@ -98,37 +99,37 @@
         Latest Articles
     </div>
     <div class="owl-carousel owl-carousel-container" id="galerie">
-        <div class="owl-carousel-img">
+        <div class="owl-carousel-img owl-carousel-art">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
             </p>
             <p><a href="#">Read more...</a></p>
         </div>
-        <div class="owl-carousel-img">
+        <div class="owl-carousel-img owl-carousel-art">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
             </p>         
             <p><a href="#">Read more...</a></p>
         </div>
-        <div class="owl-carousel-img">
+        <div class="owl-carousel-img owl-carousel-art">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
             </p>
             <p><a href="#">Read more...</a></p>
         </div>
-        <div class="owl-carousel-img">
+        <div class="owl-carousel-img owl-carousel-art">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
             </p>
             <p><a href="#">Read more...</a></p>
         </div>
-        <div class="owl-carousel-img">
+        <div class="owl-carousel-img owl-carousel-art">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
             </p>
             <p><a href="#">Read more...</a></p>
         </div>
-        <div class="owl-carousel-img">
+        <div class="owl-carousel-img owl-carousel-art">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non cum doloremque eius ea odit itaque tempora minus.
             </p>
@@ -201,34 +202,40 @@
     </section>
 
 
-
+<!----------------- JS SCRIPT ----------------->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script>
         $('.owl-carousel').owlCarousel({
 				loop:true,
-                animateOut: 'slideOutDown',
-                animateIn: 'flipInX',
-				margin:30,
+				margin:40,
 				navText: ['&#10094;','&#10095;'],
 				nav:true,
 				dotsEach: false, 
 				autoplay: true,
-				autoplayTimeout: 2500,
+				autoplayTimeout: 3200,
 				autoplayHoverPause: true,
 				responsive:{
 					0:{
 						items:1
 					},
-					600:{
-						items:3
+					400:{
+						items:1
 					},
+                    500:{
+                        items: 2,
+                        margin: 1
+                    },
+                    600:{
+                        items: 3,
+                        margin: 1
+                    },
 					1000:{
 						items:4
 					}
 				}
 			})
+
     </script>
-    
 </body>
 </html>
